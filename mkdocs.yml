@@ -1,1 +1,8 @@
+site_name : Malvezzi_Nicholas
 
+nav: 
+
+  - 'MD' : 'index.md'
+  - 'Test' : 'test.txt'
+theme:
+  name: readthedocs
