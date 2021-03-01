@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package scuola;
 
 public class Scuola {
@@ -31,20 +27,20 @@ public class Scuola {
     public String toString(){
         String s = "Grandezza:"+ size;
         for(int i = 0; i<size; i++){
-            s = s+ vect[i];
+            s = s+vect[i].toString();
         }
         return s;
     }
     
     public int indexOf(String s){
-        int cont = 0;
+        int cont = -1;
         for(int i = 0; i<size; i++){
             Persona pers = vect[i];
             if(pers.getNome().equals(s)){
-                cont++;  
+                cont = i;  
             } 
             if(pers.getCognome().equals(s)){
-                cont++;
+                cont = i;
             }
         }
         if(cont==0){
@@ -55,7 +51,7 @@ public class Scuola {
         }
     }
     public void remove(int pos){
-        
+        vect[pos] = null;
     }
 
     Persona get(int pos) {
